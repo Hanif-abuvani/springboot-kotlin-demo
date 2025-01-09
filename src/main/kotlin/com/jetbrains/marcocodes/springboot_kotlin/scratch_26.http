@@ -1,0 +1,37 @@
+### GET request to example server
+GET http://localhost:8082/api/v1/articles
+Accept: application/json
+###
+
+GET http://localhost:8082/api/v1/articles/new-article
+Accept: application/json
+###
+
+//Saves artice but duplicates are also allowed
+POST http://localhost:8082/api/v1/articles
+Content-Type: application/json
+
+{
+  "title": "New article",
+  "content": "This is new article"
+}
+
+###
+
+PUT http://localhost:8082/api/v1/articles/new-article
+Content-Type: application/json
+
+{
+  "content": "This is better article"
+}
+
+###
+
+DELETE http://localhost:8082/api/v1/articles/new-article
+
+###
+
+//Added especially to remove duplicate multiple articles
+DELETE http://localhost:8082/api/v1/articles/all/new-article
+
+###
